@@ -25,7 +25,7 @@ public class appFrame extends JFrame {
         addtask = btnPanel.getAddtaskbtn();
         clear = btnPanel.getClearbtn();
 
-//        addListener();
+        addListener();
     }
 
     public void addListener() {
@@ -36,6 +36,7 @@ public class appFrame extends JFrame {
 
                 Task task = new Task();
                 list.add(task);
+                list.indexnum();
                 revalidate();
 
             }

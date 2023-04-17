@@ -37,4 +37,25 @@ public class Task extends JPanel {
 
     }
 
+    public void writeindexj1(int n) {
+        this.index.setText(String.valueOf(n));
+        this.revalidate();
+    }
+
+    public JButton getdonej() {
+        return this.done;
+    }
+
+    public JButton getremovej() {
+        return this.remove;
+    }
+
+    public void setDone(JButton done) {
+        this.taskname.setBackground(Color.GREEN);
+        this.index.setBackground(Color.GREEN);
+        this.remove.setBackground(Color.GREEN);
+        this.done.setBackground(Color.GREEN);
+        this.setBackground(Color.GREEN);
+        revalidate();
+    }
 }

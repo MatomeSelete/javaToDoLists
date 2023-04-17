@@ -1,6 +1,7 @@
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import javax.swing.JButton;
 
 public class BtnPanel extends JPanel {
     private JButton addtask;

@@ -11,4 +11,13 @@ public class List extends JPanel {
 
     }
 
+    public void indexnum() {
+        Component[] listcomp = this.getComponents();
+        for (int i = 0; i < listcomp.length; i++) {
+            if (listcomp[i] instanceof Task) {
+                ((Task)listcomp[i]).writeindexj1(i+1);
+            }
+        }
+    }
+
 }
