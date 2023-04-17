@@ -10,7 +10,7 @@ public class BtnPanel extends JPanel {
 
     public BtnPanel() {
         this.setPreferredSize(new Dimension(400, 80));
-        this.setBackground(new Color(129, 202, 207));
+        this.setBackground(Color.yellow);
 
         addtask = new JButton("Add Task");
         addtask.setBorder(emptyborder);

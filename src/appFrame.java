@@ -6,11 +6,13 @@ import java.awt.event.MouseEvent;
 
 public class appFrame extends JFrame {
 
+    TitleBar title = new TitleBar();
+    BtnPanel btnPanel = new BtnPanel();
+    List list = new List();
     private JButton  addtask;
     private JButton clear;
 
-    TitleBar title = new TitleBar();
-    BtnPanel btnPanel = new BtnPanel();
+
 
     public appFrame() {
         this.setSize(400, 700);
@@ -18,21 +20,23 @@ public class appFrame extends JFrame {
         this.setVisible(true);
         this.add(this.title, BorderLayout.NORTH);
         this.add(btnPanel, BorderLayout.SOUTH);
+        this.add(this.list, BorderLayout.CENTER);
 
         addtask = btnPanel.getAddtaskbtn();
         clear = btnPanel.getClearbtn();
 
-        addListener();
+//        addListener();
     }
 
     public void addListener() {
 
         addtask.addMouseListener(new MouseAdapter() {
             @Override
-
             public void mousePressed(MouseEvent e) {
 
-
+                Task task = new Task();
+                list.add(task);
+                revalidate();
 
             }
 
