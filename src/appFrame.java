@@ -39,6 +39,28 @@ public class appFrame extends JFrame {
                 list.indexnum();
                 revalidate();
 
+                JButton done = task.getdonej();
+                done.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+//                        super.mouseClicked(e);
+//                        task.donestatus();
+                        revalidate();
+                    }
+                });
+
+
+                JButton remove = task.getremovej();
+                remove.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        list.remove(task);
+                        list.indexnum();
+                        revalidate();
+                        repaint();
+                    }
+                });
+
             }
 
         });
