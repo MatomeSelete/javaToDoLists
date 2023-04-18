@@ -27,7 +27,7 @@ public class Task extends JPanel {
         taskname.setBackground(new Color(255, 234, 17));
         this.add(this.taskname);
 
-        done = new JButton("Add new task ");
+        done = new JButton("Done ");
         done.setPreferredSize(new Dimension(10, 20));
         this.add(this.done);
 
@@ -51,7 +51,7 @@ public class Task extends JPanel {
         return this.remove;
     }
 
-    public void setDone(JButton done) {
+    public void donestatus() {
         this.taskname.setBackground(Color.GREEN);
         this.index.setBackground(Color.GREEN);
         this.remove.setBackground(Color.GREEN);

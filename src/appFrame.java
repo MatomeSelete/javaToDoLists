@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -40,10 +39,42 @@ public class appFrame extends JFrame {
                 revalidate();
 
                 JButton done = task.getdonej();
+                done.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        super.mouseClicked(e);
+                        task.donestatus();
+                        revalidate();
+                    }
+                });
 
 
+                JButton remove = task.getremovej();
+                remove.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        list.remove(task);
+                        list.indexnum();
+                        revalidate();
+                        repaint();
+                    }
+                });
             }
+        });
 
+        clear.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Component[] tasklist = list.getComponents();
+                for (int i = 0; i < tasklist.length; i++) {
+                    if (tasklist[i] instanceof Task) {
+                        list.remove((Task)tasklist[i]);
+                    }
+                }
+
+                revalidate();
+                repaint();
+            }
         });
 
     }
