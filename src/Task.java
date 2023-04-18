@@ -47,6 +47,7 @@ public class Task extends JPanel {
     }
 
     public JButton getremovej() {
+
         return this.remove;
     }
 

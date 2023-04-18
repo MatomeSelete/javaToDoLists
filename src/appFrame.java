@@ -39,6 +39,9 @@ public class appFrame extends JFrame {
                 list.indexnum();
                 revalidate();
 
+                JButton done = task.getdonej();
+
+
             }
 
         });
